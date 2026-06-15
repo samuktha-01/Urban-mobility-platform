@@ -3,8 +3,7 @@ dotenv.config();
 
 import app from "./app.js";
 import pool from "./config/db.js";
-console.log(typeof process.env.DB_PASSWORD);
-console.log(process.env.DB_PASSWORD);
+
 
 pool.query("SELECT NOW()")
   .then(() => console.log("✅ Database Connected"))
