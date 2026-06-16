@@ -27,6 +27,7 @@ export default function RoutePlanner() {
           Route Planner
         </h1>
 
+        {/* Search Box */}
         <div className="bg-white rounded-3xl shadow-lg p-8">
           <div className="grid grid-cols-2 gap-6">
             <input
@@ -48,12 +49,13 @@ export default function RoutePlanner() {
 
           <button
             onClick={handleSearch}
-            className="mt-6 px-8 py-3 rounded-xl bg-blue-600 text-white font-semibold"
+            className="mt-6 px-8 py-3 rounded-xl bg-blue-600 text-white font-semibold hover:bg-blue-700 transition"
           >
             Find Route
           </button>
         </div>
 
+        {/* Route Result */}
         {route && (
           <div className="mt-8 bg-white rounded-3xl shadow-lg p-8">
             <h2 className="text-2xl font-bold mb-6">
@@ -90,14 +92,59 @@ export default function RoutePlanner() {
               </div>
             </div>
 
+            {/* Suggested Transport */}
             <div className="mt-6 bg-blue-50 border border-blue-100 p-5 rounded-2xl">
               <h3 className="font-bold text-lg">
                 Suggested Transport
               </h3>
 
-              <p className="mt-2 text-gray-700">
-                {route.transport}
+              <p className="mt-2 text-gray-700 text-lg font-semibold">
+                🚇 {route.transport}
               </p>
+
+              {/* Smart Recommendation */}
+              <div className="mt-6 bg-white rounded-xl p-5 border border-blue-100">
+                <h4 className="font-bold text-lg text-blue-700 mb-3">
+                  🤖 Smart Recommendation
+                </h4>
+
+                <p className="text-gray-700">
+                  Metro + Bus is the most sustainable route for this journey.
+                </p>
+
+                <div className="grid grid-cols-3 gap-4 mt-4">
+                  <div className="bg-green-50 p-3 rounded-lg text-center">
+                    <p className="text-sm text-gray-500">
+                      Cost Saved
+                    </p>
+                    <p className="font-bold text-green-600">
+                      ₹80
+                    </p>
+                  </div>
+
+                  <div className="bg-emerald-50 p-3 rounded-lg text-center">
+                    <p className="text-sm text-gray-500">
+                      CO₂ Reduced
+                    </p>
+                    <p className="font-bold text-emerald-600">
+                      2.4 kg
+                    </p>
+                  </div>
+
+                  <div className="bg-blue-50 p-3 rounded-lg text-center">
+                    <p className="text-sm text-gray-500">
+                      Time Saved
+                    </p>
+                    <p className="font-bold text-blue-600">
+                      12 mins
+                    </p>
+                  </div>
+                </div>
+
+                <div className="mt-4 bg-green-100 text-green-700 px-4 py-3 rounded-lg font-medium">
+                  🌱 Eco Friendly Route — equivalent to reducing emissions from a short car trip.
+                </div>
+              </div>
             </div>
           </div>
         )}
