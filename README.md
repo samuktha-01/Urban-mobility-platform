@@ -58,6 +58,26 @@ npm run dev
 ```
 
 ---
+## Screenshots
+
+### Dashboard
+![Dashboard](screenshots/dashboard.png)
+
+### Route Planner
+![Route Planner](screenshots/routeplanner.png)
+
+### Analytics
+![Analytics](screenshots/analytics.png)
+
+### Wallet
+![Wallet](screenshots/wallet.png)
+
+### Carbon Tracker
+![Carbon Tracker](screenshots/carbon.png)
+
+### Profile
+![Profile](screenshots/profile.png)
+
 
 ## Future Enhancements
 
