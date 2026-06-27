@@ -5,6 +5,7 @@ import tripsRoutes from "./routes/tripsRoutes.js";
 import walletRoutes from "./routes/walletRoutes.js";
 import carbonRoutes from "./routes/carbonRoutes.js";
 import profileRoutes from "./routes/profileRoutes.js";
+import authRoutes from "./routes/authRoutes.js";
 
 
 const app = express();
@@ -16,6 +17,7 @@ app.use("/api/dashboard", dashboardRoutes);
 app.use("/api/wallet", walletRoutes);
 app.use("/api/carbon", carbonRoutes);
 app.use("/api/profile", profileRoutes);
+app.use("/api/auth", authRoutes);
 
 app.get("/", (req, res) => {
   res.json({
